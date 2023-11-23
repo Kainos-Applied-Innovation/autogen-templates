@@ -55,3 +55,8 @@ Feel free to drop us a message if you have any:
 - spotted a bug that needs fixed
 - ideas on templates that could be useful
 - ... or anything else that comes to mind
+
+
+
+## 🔨 Contributors
+Liam McCormick - development
