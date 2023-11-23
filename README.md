@@ -12,6 +12,31 @@ You should also consider ugrading to their latest version of Autogen, as they ad
 
 
 
+## Before you get started
+
+You should decide what model you want to use. This can be changed later, but if you want to use:
+
+### Azure OpenAI (recommended)
+1. Open the Azure portal
+2. Create a new Azure OpenAI resource, if you haven't made one already
+3. Deploy a GPT model and give it a name (you'll use this name later). I recommend starting with GPT-3.5-turbo 
+4. Note your deployment settings. You'll need your:
+- key
+- base url 
+- API version
+- your model's deployment name
+> You can find these details by opening the Chat Playground and clicking on "View Code"
+5. Within this project's directory, rename the `.env.example` file to `.env`
+6. Add your `key` and `base url`
+7. Open the `code_reviewer_template.py` file
+8. Modify the `config_list` variable. You should add your model's deployment name and the API version
+
+
+### Open source models
+For instructions on this, you can check for tutorials online.
+
+
+
 ## 💻 Setup
 
 To get started:
@@ -32,9 +57,17 @@ python3 code_reviewer_template.py
 
 ## 💡 Examples
 
-Below are examples of how you can use Autogen agents:
+Below are ideas on how you could use Autogen agents to help you:
 
 - Code review agents
+    - Check code for bugs, security, performance issues and suggest improvements
+- Feedback and improvement loop
+    - Check text for errors and suggest improvements
+    - Add those improvements to the original text
+    - E.g. text, emails, social media posts
+- Brainstorming sessions
+    - Would likely require a bit more prompting, since you'll want to avoid the generic answers from GPT
+    - You could collaborate with several bots and iterate on ideas, since we can have a human-in-the-loop
 
 
 

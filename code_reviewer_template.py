@@ -4,24 +4,29 @@
 # In this example, they will review a piece of code and provide feedback on how to improve it.
 #--------------------------------------------------------------------------------------------------------------------------
 
+import os
 from autogen import AssistantAgent, UserProxyAgent, config_list_from_dotenv, GroupChat, GroupChatManager
+from dotenv import load_dotenv
 
-# retrieves your OpenAI API key
-# make sure you've set your OpenAI API key in the .env file
-config_list_gpt4 = config_list_from_dotenv(
-    dotenv_file_path='.env',
-    filter_dict={
-        "model": {
-            "gpt-4"
-        }
+load_dotenv()  # load environment variables from a .env file
+
+# retrieves your Azure OpenAI API settings
+# make sure you've set them in the .env file
+config_list=[
+    {
+        "model": "gpt-4-turbo",         # change this to the name you have specified for your deployed model on Azure OpenAI. E.g. "liams-deployed-gpt-4"
+        "api_key": os.getenv("AZURE_OPENAI_API_KEY"),
+        "api_type": "azure",
+        "api_base": os.getenv("AZURE_OPENAI_API_BASE"),
+        "api_version": "2023-07-01-preview",
     }
-)
+]
 
 # customise these settings however you want
 llm_config = {
     "seed": 42,
     "temperature": 0,
-    "config_list": config_list_gpt4,
+    "config_list": config_list,
     "request_timeout": 1200,
 }
 
@@ -121,7 +126,7 @@ code_review_manager = GroupChatManager(
 user.initiate_chat(
     code_review_manager,
     message="""
-    Review the following code for improvements:
+    Review the following code for improvements: 
     ```
     import flask
     import os

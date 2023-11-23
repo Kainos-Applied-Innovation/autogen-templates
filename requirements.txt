@@ -1,1 +1,2 @@
 pyautogen==0.1.14
+python-dotenv
