@@ -46,13 +46,12 @@ To get started:
 ```bash
 pip install -r requirements.txt
 ```
-3. Rename the `.env.example` file to `.env`
-3. Setup your OpenAI config, using the `.env` file
+3. Make sure that the `.env` file has been set up, using the steps in the previous section
 4. Run the following command to get started:
 ```bash
 python3 code_reviewer_template.py
 ```
-5. Once you're happy with the response from the agents and no more changes are needed, reply with "exit"
+5. Once you're happy with the response from the agents and no more changes are needed, reply with "exit". If you need to, you can type `CONTROL + C` on Mac to immediately stop the process
 
 
 

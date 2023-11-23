@@ -5,7 +5,7 @@
 #--------------------------------------------------------------------------------------------------------------------------
 
 import os
-from autogen import AssistantAgent, UserProxyAgent, config_list_from_dotenv, GroupChat, GroupChatManager
+from autogen import AssistantAgent, UserProxyAgent, GroupChat, GroupChatManager
 from dotenv import load_dotenv
 
 load_dotenv()  # load environment variables from a .env file
@@ -14,11 +14,11 @@ load_dotenv()  # load environment variables from a .env file
 # make sure you've set them in the .env file
 config_list=[
     {
-        "model": "gpt-4-turbo",         # change this to the name you have specified for your deployed model on Azure OpenAI. E.g. "liams-deployed-gpt-4"
+        "model": "gpt-4-turbo",                     # change this to the name you have specified for your deployed model on Azure OpenAI. E.g. "liams-deployed-gpt-4"
         "api_key": os.getenv("AZURE_OPENAI_API_KEY"),
         "api_type": "azure",
         "api_base": os.getenv("AZURE_OPENAI_API_BASE"),
-        "api_version": "2023-07-01-preview",
+        "api_version": "2023-07-01-preview",        # you may need to change this
     }
 ]
 
