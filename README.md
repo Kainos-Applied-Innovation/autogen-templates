@@ -10,6 +10,8 @@ As a result, this repo may become a little out-of-date over time as they continu
 
 You should also consider ugrading to their latest version of Autogen, as they add new capabilities.
 
+The following instructions are for 🍎 Mac users, but there should be a lot of similarity for Windows users.
+
 
 
 ## 🎬 Before you get started
@@ -51,7 +53,7 @@ pip install -r requirements.txt
 ```bash
 python3 code_reviewer_template.py
 ```
-5. Once you're happy with the response from the agents and no more changes are needed, reply with "exit". If you need to, you can type `CONTROL + C` on Mac to immediately stop the process
+5. Once you're happy with the response from the agents and no more changes are needed, reply with "exit". If you need to, you can use the `CONTROL KEY + C` on Mac to immediately stop the process
 
 
 
