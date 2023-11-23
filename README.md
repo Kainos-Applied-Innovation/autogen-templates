@@ -12,24 +12,25 @@ You should also consider ugrading to their latest version of Autogen, as they ad
 
 
 
-## Before you get started
+## 🎬 Before you get started
 
 You should decide what model you want to use. This can be changed later, but if you want to use:
 
 ### Azure OpenAI (recommended)
 1. Open the Azure portal
 2. Create a new Azure OpenAI resource, if you haven't made one already
-3. Deploy a GPT model and give it a name (you'll use this name later). I recommend starting with GPT-3.5-turbo 
-4. Note your deployment settings. You'll need your:
+3. Open the Azure OpenAI Playground
+4. Deploy a GPT model and give it a name (you'll use this name later). I recommend starting with GPT-3.5-turbo 
+5. Note your deployment settings. You'll need your:
 - key
 - base url 
 - API version
 - your model's deployment name
 > You can find these details by opening the Chat Playground and clicking on "View Code"
-5. Within this project's directory, rename the `.env.example` file to `.env`
-6. Add your `key` and `base url`
-7. Open the `code_reviewer_template.py` file
-8. Modify the `config_list` variable. You should add your model's deployment name and the API version
+6. Within this project's directory, rename the `.env.example` file to `.env`
+7. Add your `key` and `base url`
+8. Open the `code_reviewer_template.py` file
+9. Modify the `config_list` variable. You should add your model's deployment name and the API version
 
 
 ### Open source models
