@@ -16,9 +16,7 @@ The following instructions are for 🍎 Mac users, but there should be a lot of 
 
 ## 🎬 Before you get started
 
-You should have Python installed on your Mac. Then download this repo.
-
-You should also decide what model you want to use. This can be changed later, but if you want to use:
+You should download this repo, then decide what model you want to use. This can be changed later, but if you want to use:
 
 
 ### Azure OpenAI (recommended)
@@ -48,6 +46,10 @@ You can also create a key within the OpenAI platform and access the GPT models t
 
 For security reasons, especially with company data, it's not recommended.
 
+
+### Python
+
+Most Macbooks come with Python pre-installed and our guide assumes this is the case. If you face issues later on, you can download Python via the Web.
 
 
 ## 💻 Setup
