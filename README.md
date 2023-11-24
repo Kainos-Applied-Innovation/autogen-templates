@@ -20,6 +20,7 @@ You should have Python installed on your Mac. Then download this repo.
 
 You should also decide what model you want to use. This can be changed later, but if you want to use:
 
+
 ### Azure OpenAI (recommended)
 1. Open the Azure portal
 2. Create a new Azure OpenAI resource, if you haven't made one already
@@ -79,9 +80,14 @@ Below are ideas on how you could use Autogen agents to help you:
     - Check text for errors and suggest improvements
     - Add those improvements to the original text
     - E.g. text, emails, social media posts
+- Generate a UK.GOV error message for a situation where ...
+    - Should follow the WCAG 2.1 accessibility guidelines
+    - Messages should be concise and easily understood
 - Brainstorming sessions
     - Would likely require a bit more prompting, since you'll want to avoid the generic answers from GPT
     - You could collaborate with several bots and iterate on ideas, since we can have a human-in-the-loop
+- Generate alt text for an image that features ...
+    - Do not start with "Image of"
 
 
 
