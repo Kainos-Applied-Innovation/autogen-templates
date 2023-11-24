@@ -1,5 +1,5 @@
 # 🔮 Autogen Templates
-Guide for how to create your own Autogen agents. Check the Microsoft repo for the latest updates.
+Guide for how to create your own Autogen agents. Check the [Microsoft repo](https://github.com/microsoft/autogen/tree/main) for the latest updates.
 
 
 ## 📝 Note
@@ -39,6 +39,13 @@ You should also decide what model you want to use. This can be changed later, bu
 
 ### Open source models
 For instructions on this, you can check for tutorials online.
+
+
+### OpenAI platform (not recommended)
+
+You can also create a key within the OpenAI platform and access the GPT models that way.
+
+For security reasons, especially with company data, it's not recommended.
 
 
 
