@@ -16,13 +16,15 @@ The following instructions are for 🍎 Mac users, but there should be a lot of 
 
 ## 🎬 Before you get started
 
-You should decide what model you want to use. This can be changed later, but if you want to use:
+You should have Python installed on your Mac. Then download this repo.
+
+You should also decide what model you want to use. This can be changed later, but if you want to use:
 
 ### Azure OpenAI (recommended)
 1. Open the Azure portal
 2. Create a new Azure OpenAI resource, if you haven't made one already
 3. Open the Azure OpenAI Playground
-4. Deploy a GPT model and give it a name (you'll use this name later). I recommend starting with GPT-3.5-turbo 
+4. Deploy a GPT model and give it a name (you'll use this name later). I recommend starting with the GPT-3.5-turbo model
 5. Note your deployment settings. You'll need your:
 - key
 - base url 
@@ -43,17 +45,20 @@ For instructions on this, you can check for tutorials online.
 ## 💻 Setup
 
 To get started:
-1. Navigate to the project's root directory in the Terminal
-2. Install all the required plugins:
+1. Open the Finder app on your Mac
+2. Find where you've downloaded this repo
+3. Right click on the folder and click on "New Terminal at Tab"
+4. The terminal window will open for that folder
+5. Install all the required plugins:
 ```bash
 pip install -r requirements.txt
 ```
-3. Make sure that the `.env` file has been set up, using the steps in the previous section
-4. Run the following command to get started:
+6. Make sure that the `.env` file has been set up, using the steps in the previous section
+7. Run the following command to get started:
 ```bash
 python3 code_reviewer_template.py
 ```
-5. Once you're happy with the response from the agents and no more changes are needed, reply with "exit". If you need to, you can use the `CONTROL KEY + C` on Mac to immediately stop the process
+8. Once you're happy with the response from the agents and no more changes are needed, reply with "exit". If you need to, you can use the `CONTROL KEY + C` on Mac to immediately stop the process
 
 
 
@@ -78,6 +83,32 @@ Below are ideas on how you could use Autogen agents to help you:
 The Generative AI industry is changing rapidly and new tools are being released every week. 
 
 You should check the Generative AI page on Sharepoint for the latest advice and best practices.
+
+
+
+## 💬 Prompt Advice
+
+To write good prompts, we need to use the model's training dataset to our advantage. Remember that these LLMs have been trained on thousands of books, online posts, Wikipedia articles etc.
+
+### Autogen Roles
+When you're creating a Role for an Autogen agent, you should:
+- Include the agent's name
+    - This might help with agent selection
+- Describe what the agent should and shouldn't do
+- Outline any output you want to get back
+- Consider adding a sentence at the end, which tells the agent what other bot it should talk to
+    - e.g. For the Recommendation bot, it's told to "Collaborate with the Summariser" bot and will then write a summary based on the Recommendation bot's message
+
+### Make the model "listen" to you
+
+If you're finding that the model does not do what you want, despite explicitly telling it in the prompt, then you can try a few things:
+- Write your important command in all caps
+    - e.g. "DO NOT INCLUDE ANY JSON IN YOUR RESPONSE"
+    - Research shows that models respond better to this, since they interpret it as though you are shouting
+    - This makes sense, since people would normally write like this in books and online posts - which is what the model was trained on
+- Write your important command at the end of the prompt
+    - LLMs have issues with attention. Sometimes text in a section will throw them off-course and lead to weird results
+    - Putting it at the end means they're more likely to do it
 
 
 
