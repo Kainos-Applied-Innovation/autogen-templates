@@ -80,7 +80,7 @@ Below are ideas on how you could use Autogen agents to help you:
     - Check text for errors and suggest improvements
     - Add those improvements to the original text
     - E.g. text, emails, social media posts
-- Generate a UK.GOV error message for a situation where ...
+- Generate a GOV.UK error message for a situation where ...
     - Should follow the WCAG 2.1 accessibility guidelines
     - Messages should be concise and easily understood
 - Brainstorming sessions
